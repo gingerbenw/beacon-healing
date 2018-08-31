@@ -1846,6 +1846,10 @@
 				padding: 3em;
 			}
 
+			.box header h2 {
+				margin-bottom: 1.5em;
+			}
+
 		}
 
 		@media screen and (max-width: 736px) {
