@@ -5,26 +5,37 @@
  */
 
 import React from 'react';
+import $ from 'jquery';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { FaBars } from 'react-icons/fa';
+
+import Sidebar from '../Sidebar';
 
 // import { FormattedMessage } from 'react-intl';
 // import messages from './messages';
 
 /* eslint-disable react/prefer-stateless-function */
 class Header extends React.PureComponent {
+  menuToggle() {
+    $('#menu').show();
+  }
+
   render() {
     return (
-      <HeaderWrapper id="header">
-        <div className="logo">
-          <a href="/">
-            <span>The</span> Beacon
+      <React.Fragment>
+        <HeaderWrapper id="header">
+          <div className="logo">
+            <a href="/">
+              <span>The</span> Beacon
+            </a>
+          </div>
+          <a href="#menu" onClick={this.menuToggle}>
+            <FaBars />
           </a>
-        </div>
-        <a href="#menu">
-          <span>Menu</span>
-        </a>
-      </HeaderWrapper>
+        </HeaderWrapper>
+        <Sidebar />
+      </React.Fragment>
     );
   }
 }
