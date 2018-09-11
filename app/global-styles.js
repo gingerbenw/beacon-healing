@@ -4,7 +4,7 @@ import { injectGlobal } from 'styled-components';
 injectGlobal`
 
 @charset "UTF-8";
-// @import url(font-awesome.min.css);
+@import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans:300,400,600,700,800");
 
 /* Reset */
@@ -3706,13 +3706,16 @@ injectGlobal`
 			text-decoration: none;
 		}
 
-			#banner .more:before {
+			#banner .more svg {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
 				font-family: FontAwesome;
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
+				position: absolute;
+				top: 15px;
+				left: 14px;
 			}
 
 			#banner .more:hover {
@@ -3721,18 +3724,10 @@ injectGlobal`
 				box-shadow: 0 0 1px 0 rgba(255, 255, 255, 0.5);
 			}
 
-				#banner .more:hover:before {
+				#banner .more:hover svg {
 					color: rgba(255, 255, 255, 0.5);
 				}
 
-			#banner .more:before {
-				content: 'f107';
-				color: #FFF;
-				font-size: 2em;
-				position: absolute;
-				right: .425em;
-				bottom: -.075em;
-			}
 
 		#banner:before {
 			-moz-transition: opacity 3s ease;
